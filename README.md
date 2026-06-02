@@ -28,11 +28,9 @@
 * claude를 코드 작성 및 에러 디버깅에 사용하였습니다.
 
 ### 0. enviroment settings
-      ```bash
       pip install -U -r requirements.txt
 
 ### 1. NFloat4 + DQ
-    ```bash
     CUDA_VISIBLE_DEVICES=4 python qlora.py --model_name_or_path huggyllama/llama-7b \
     --dataset alpaca --bf16 True --bits 4 --quant_type nf4 --double_quant True \
     --lora_r 64 --lora_alpha 16 --lora_dropout 0.05 --optim paged_adamw_32bit \
@@ -41,7 +39,6 @@
     --output_dir ./results/llama1_7b_nf4_alpaca
 
 ### 2. Float4
-    ```bash
     CUDA_VISIBLE_DEVICES=5 python qlora.py --model_name_or_path huggyllama/llama-7b \
     --dataset alpaca --bf16 True --bits 4 --quant_type nf4 --double_quant True \
     --lora_r 64 --lora_alpha 16 --lora_dropout 0.05 --optim paged_adamw_32bit \
@@ -50,7 +47,6 @@
     --output_dir ./results/llama1_7b_nf4_alpaca
 
 ### 3. BFloat16
-    ```bash
     CUDA_VISIBLE_DEVICES=6,7 python qlora.py --model_name_or_path huggyllama/llama-7b \
     --dataset alpaca --bf16 True --bits 16 --lora_r 64 --lora_alpha 16 --lora_dropout 0.05 --optim paged_adamw_32bit \
     --learning_rate 2e-4 --max_steps 1875 --per_device_train_batch_size 1 --gradient_accumulation_steps 16 \
