@@ -28,8 +28,8 @@
 * claude를 코드 작성 및 에러 디버깅에 사용하였습니다.
 
 ### 0. enviroment settings
-   ```bash
-   pip install -U -r requirements.txt
+      ```bash
+      pip install -U -r requirements.txt
 
 ### 1. NFloat4 + DQ
     ```bash
