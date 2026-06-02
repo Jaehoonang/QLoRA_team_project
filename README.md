@@ -7,6 +7,7 @@
 * **목표:** 모델의 전반적 지식 및 추론 능력 평가 (5-shot MMLU)
 * **평가 지표:** Mean 5-shot MMLU Accuracy (57개 과목 대상)
 * **모델:** LLaMA (7B, 13B)
+* **데이터셋:** Alpaca dataset, FLAN v2 dataset, OASST dataset(7B)
 
 ## 실험 결과 (Mean 5-shot MMLU Accuracy)
 
